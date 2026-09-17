@@ -25,7 +25,7 @@ Default installation:
 - Copy `delivery.md` to `docs/ai/workflows.md` and both `ai-state-check*.py` files to `bin/`.
 - Update the existing canonical root guide with routing, actual check commands, and pointers. Keep it short. Use `AGENTS.md` or `CLAUDE.md`; maintain host adapters only when they are used.
 - Create/adapt `docs/ai/overrides.md` and `docs/ai/vendors.md`. Record the source revision, local exceptions, selected preferences, and private evidence/retrospective locations.
-- Keep `.ai/` ignored. Create lessons/landmines only for useful observed knowledge.
+- Keep `.ai/` ignored. A durable in-repo copy of reports is ignored while a run is open and committed after `pr` (see the delivery guide). Create lessons/landmines only for useful observed knowledge.
 - Install the optional agent briefs only for roles that will actually be used. On Claude they live in `.claude/agents/`; other hosts use their native mechanism.
 
 Use `harness.md` only when repeated external dispatches justify automation and the platform supports it. Use `tooling.md` only for an actual tooling audit/install request. Neither is a prerequisite for ordinary daily use. Existing instructions and risk routing govern subsequent work.
