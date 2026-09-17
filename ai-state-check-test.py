@@ -165,6 +165,17 @@ class Workflow(unittest.TestCase):
         self.report('round-2.md')
         self.finish()
 
+    def test_a_second_review_with_blockers_is_never_skipped(self):
+        # A clean round 1 does not require a round 2, but once one exists it is
+        # evidence: reporting blockers and then advancing on the earlier clean
+        # report would pin a verification nobody passed.
+        self.reviewed()
+        self.report('round-2.md', blocking=2)
+        self.blocked('--advance', 'verify', '--set', 'product_check=Verified',
+                     contains='unresolved blocking')
+        self.report('round-2.md')
+        self.finish()
+
     def test_blockers_require_verification_even_without_code_changes(self):
         self.reviewed(blocking=1)
         self.blocked('--advance', 'verify', '--set', 'product_check=Verified', contains='round-2.md does not exist')
