@@ -274,8 +274,11 @@ def suite_check(state):
 def final_review(state):
     path = REVIEWS / 'round-1.md'
     first = unchanged_report(path, state, 'review_hash', state['implementation_models'])
-    if first['sha'] != git('rev-parse', 'HEAD') or first['blocking']:
-        path = REVIEWS / 'round-2.md'
+    # A present round 2 is evidence whether or not round 1 required one: skipping
+    # it would pin an earlier clean report over a later one reporting blockers.
+    second = REVIEWS / 'round-2.md'
+    if first['sha'] != git('rev-parse', 'HEAD') or first['blocking'] or second.exists():
+        path = second
         final = report(path, state, state['implementation_models'])
         if final.get('previous') != state['review_hash']:
             raise Stop('round-2.md: previous must identify the accepted round-1 report hash')
