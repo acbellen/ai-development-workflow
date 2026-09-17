@@ -27,7 +27,7 @@ If scope grows into gated work, preserve changes on the task branch, continue in
 
 ## Gated work
 
-Use one authoritative **task worktree**, based on the intended PR target. Run the orchestrator, gate, implementation, and reviews from its root. Keep durable plans in the repo and `.ai/` gitignored. Preserve evidence in PR attachments or the repo's external evidence location; committing a report containing its own HEAD creates a circular reference.
+Use one authoritative **task worktree**, based on the intended PR target. Run the orchestrator, gate, implementation, and reviews from its root. Keep durable plans in the repo and `.ai/` gitignored. Preserve evidence in PR attachments or the repo's external evidence location; committing a report containing its own HEAD creates a circular reference. A project that keeps a durable copy in the repository ignores that path while the run is open and commits it after `pr`: committed earlier, the report's own `sha` is stale, the pinned test capture is invalidated, and the clean-tree check cannot pass — the three requirements have no common ordering. That copy is a record; the run's chain stays in `.ai/reviews/`, and its own numbering never drives the chain's.
 
 Resolve `<py>` from the root guide. In this section, `gate` is shorthand for `<py> bin/ai-state-check.py`, not an installed executable. Initialize once:
 
@@ -79,7 +79,7 @@ The first successful capture pins the command; subsequent captures use the same 
 
 ### Code review and verification
 
-Use the configured **code reviewer**, in a fresh context and on a model distinct from all implementation authors. Give base/HEAD, spec/plan, relevant guidance, and test log. Review the whole branch and trace assembled behavior: correctness, security, compatibility, spec deviations, then repo fit. Let tools handle mechanical checks. Instruction changes also need cross-file consistency and an old-wording sweep. Exercise the user/API path where applicable.
+Use the configured **code reviewer**, in a fresh context and on a model distinct from all implementation authors. Give base/HEAD, spec/plan, relevant guidance, and test log. Review the whole branch and trace assembled behavior: correctness, security, compatibility, spec deviations, then repo fit. Let tools handle mechanical checks. Instruction changes also need cross-file consistency and an old-wording sweep. Exercise the user/API path where applicable. When the change is itself a runnable procedure — this workflow, a gate, CI, scripts an agent follows — execute it once end to end at the reviewed revision; reading the diff finds contradictions between files but never a step whose inputs, ordering, or exit path do not work.
 
 Write `.ai/reviews/round-1.md` on current HEAD. Advancing review fingerprints its contents. Reviewers never edit implementation or state. Triage findings with evidence; fix blockers and explain declines/non-blocking follow-ups. Ask only for decisions changing requirements or accepting material risk.
 
