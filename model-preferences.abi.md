@@ -11,7 +11,7 @@ These names describe preferences carried over from my working setup, not verifie
 | Spec review | Grok via Cursor; example preference: Grok 4.7 standard, high effort | Challenge architecture, assumptions, acceptance criteria, and scope |
 | Implementation, default lane | Composer via Cursor; example preference: Composer 2.5 standard | Any task the plan judges it sufficient for: mechanical change, decisive check. Fast, and on a separate allowance |
 | Implementation, stronger lane | Claude subagent in the same worktree: Sonnet by default, Opus when the plan flags the task as genuinely hard | Chosen per task by the planner: the riskiest task, design judgment, cross-cutting change, auth/payment/data/migration paths |
-| Code review | Codex; example preference: GPT-6 Astra, low effort | Independent review and focused verification of fixes |
+| Code review | Codex; example preference: Codex 6.1 Sol, medium effort | Independent review and focused verification of fixes |
 
 I favor Composer partly because the Cursor allowance available to me has provided a separate, larger budget pool. That is an account-specific reason, not a claim that it is universally cheapest or best. I use standard Cursor implementation ids rather than `-fast`. Change that setting if your own measured results justify it.
 
