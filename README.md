@@ -42,7 +42,7 @@ The full procedure is in [delivery.md](delivery.md). [workflow.md](workflow.md) 
 ## Choose your models and plugins
 
 - [model-preferences.md](model-preferences.md): editable generic starting point. Choose models you have access to and can verify.
-- [model-preferences.abi.md](model-preferences.abi.md): my example, including Grok for spec review, Composer as the default implementation lane with a stronger lane the plan can choose per task, and Codex for code review, with the reasons and fallback rules.
+- [model-preferences.abi.md](model-preferences.abi.md): my example, including Grok for spec review, Composer as the default implementation lane with a stronger lane the plan can choose per task, and Codex for code review, with the reasons and fallback rules. It also says how I want questions and hand-off steps written to me.
 
 I also want to be open about the plugins in my own setup: superpowers, context7, and ponytail, all for Claude Code. My profile lists what each contributes. The implementer brief preloads two superpowers skills when that plugin is present and works unchanged without it. None of the three is required by the workflow.
 
