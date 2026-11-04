@@ -12,7 +12,7 @@ An integration request authorizes adapting repo guidance and copying the checker
 
 ## 2. Choose preferences
 
-Use `model-preferences.md` by default. Use `model-preferences.abi.md` only when the user selects Abi's example. Existing explicit user preferences win over both. Keep the generic profile's common identity/fallback rules and merge in the selected role choices. Write the effective roles and resolved routes into the target's `docs/ai/vendors.md`; keep model choices out of the common delivery procedure. Rewrite source-only relative profile links to the pinned source URL, or omit them from the installed copy so they do not become broken links.
+Use `model-preferences.md` by default. Use `model-preferences.abi.md` only when the user selects Abi's example. Existing explicit user preferences win over both. Keep the generic profile's common identity/fallback rules and merge in the selected role choices. When Abi's example is selected, also copy its communication section into the target's canonical root guide. Write the effective roles and resolved routes into the target's `docs/ai/vendors.md`; keep model choices out of the common delivery procedure. Rewrite source-only relative profile links to the pinned source URL, or omit them from the installed copy so they do not become broken links.
 
 Use already available tools/accounts. Leave unknown model ids or availability clearly unresolved until needed; do not fabricate verification. Before dispatch, resolve the actual author/reviewer identities and preserve independent review. If a required independent model is unavailable, prepare the work and report the pending review honestly.
 

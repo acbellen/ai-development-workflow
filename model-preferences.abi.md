@@ -23,6 +23,16 @@ My fallback order:
 
 For an Opus-authored artifact, I select a non-Opus reviewer. If both Opus and another fallback authored it, the reviewer must differ from both. A role name is not an identity; I keep the actual cumulative authors in state and verify which model reviewed the work.
 
+## How I want agents to talk to me
+
+When my profile is selected, copy this section into the target's canonical root guide (`AGENTS.md` or `CLAUDE.md`), not `docs/ai/vendors.md`. It covers how agents talk to me, not which models they use, and it has to be loaded every session.
+
+- Tone: straightforward, calm, brief, ethical, professional. Politeness is optional. No filler, no padding, no prose where a short answer works.
+- Questions for me: a numbered list, one question per item, so I can answer each by number.
+- Drafted messages: a single block I can copy in one go, with no commentary inside it.
+- Drafts for people (Telegram and similar): basic formatting only (bold, italic, monospace, plain line breaks). No Markdown headings, tables, or nested lists unless I ask.
+- Drafts for bots, agents, or AI: Markdown is fine.
+
 ## My plugins
 
 The workflow requires no plugin, and the shared procedure never depends on one. I run it with three Claude Code plugins, and the bundle names them where that is useful, so you can see exactly what is in play:
