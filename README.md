@@ -1,11 +1,5 @@
 # AI Development Workflow
 
-I'm Abi, a senior web developer with more than eight years of professional experience. I started well before coding assistants existed, and I have been working through the shift into the AI era one project at a time. That history shapes everything here. Writing the plan down, keeping changes small enough to review, running the checks before trusting a result, and asking for a second pair of eyes on anything risky were how teams shipped safely long before a model could write code. This workflow is my attempt to keep those habits while letting AI do more of the work.
-
-It grew out of real projects rather than a blank page. I use AI for planning, implementation, and cross-checking, and I keep the responsibility for the decisions and the outcome. If you have been doing this for a long time too, I hope it feels familiar. If you are newer, I hope it gives you a gentle structure to lean on while you form your own judgment.
-
-I don't think this is perfect or right for everyone. It is a practical starting point that works for me, and it should keep changing as the tools, the projects, and the evidence change.
-
 ## Start here
 
 Point your coding AI at [INTEGRATE.md](INTEGRATE.md), with access to the project you want to update. You can copy this prompt:
