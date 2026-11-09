@@ -34,3 +34,13 @@ The workflow requires no plugin, and the shared procedure never depends on one. 
 | ponytail | Claude Code and Codex through hooks; Cursor through rules | A minimal-solution stance: reuse before writing, standard library before a dependency, the smallest correct change. It shapes what gets built, not the delivery procedure. |
 
 Quick edits do not dispatch this roster. The plan assigns a lane per task, so the stronger lane is chosen up front where it reduces repair cycles rather than after a failed round. I compare total cost and human effort per accepted change rather than assuming the lowest-cost implementation call wins. These choices are meant to be revisited, not treated as universal rules.
+
+## How I want to be asked and handed off to
+
+These cover how the session talks to me. They do not change the delivery procedure.
+
+- **Anything that needs my answer goes in a numbered list.** That includes questions, decisions, and confirmations. Each gets its own item, so I can reply to each one by number. This applies whenever there is more than one, and to anything the run is waiting on.
+- **Anything I must run myself comes as numbered steps.** That means sudo, a login or credential only I hold, or a step in a GUI or account. Each step gives the exact command or action, what I should see when it works, and what to send back if I see something else. I should be able to follow the steps top to bottom without waiting on another reply.
+- **The session runs what it can run itself.** It hands me only the steps that need me.
+
+For these to take effect, they belong in instructions the interactive session always loads, such as a user-level instruction file. Copying them into `vendors.md` alone is not enough.
